@@ -32,7 +32,7 @@ function addTask() {
 }
 
 listContainer.addEventListener('click', function(e) {
-    if (e.target.tagNames === 'LI') {
+    if (e.target.tagName === 'LI') {
         e.target.classList.toggle('checked');
         saveData()
         updateProgress()
@@ -41,7 +41,7 @@ listContainer.addEventListener('click', function(e) {
         saveData()
         updateProgress()
     }
- },false )
+ })
 
 
 function updateProgress() {
@@ -59,6 +59,4 @@ function updateProgress() {
     listContainer.innerHTML = localStorage.getItem('data');
     updateProgress()
 }
-
-
 showTask()
